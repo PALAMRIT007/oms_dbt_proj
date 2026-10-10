@@ -1,4 +1,4 @@
-# SleekMart OMS: dbt Project
+# OMS: dbt Project
 
 A dbt project that transforms Order Management System (OMS) data in **Snowflake** into clean, tested staging and consumption tables. It covers incremental loading, deduplication, change history, source freshness checks, and data quality tests.
 
@@ -23,7 +23,6 @@ Defined in a single `sources.yml` under `models/`.
 - **`landing`** (`SLEEKMART_OMS.L1_LANDING`): `customers`, `orders`, `orderitems`, `employees`, `stores`, `suppliers`, `products`, `sales_us`, `sales_europe`, `sales_asia`
 - **`training`** (`SLEEKMART_OMS.TRAINING`): `city_temperature`, `sales_us`, `sales_uk`, `sales_india`
 
-Freshness is checked on the `landing` source using `updated_at` (warn after 1 day, error after 3 days).
 
 ## Models
 
